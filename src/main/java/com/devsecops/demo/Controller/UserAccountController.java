@@ -1,6 +1,6 @@
 package com.devsecops.demo.Controller;
 
-import com.devsecops.demo.Entity.UserAccount;
+import com.devsecops.demo.Dto.UserAccountDto;
 import com.devsecops.demo.Services.UserAccountImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +15,13 @@ public class UserAccountController {
     UserAccountImplementation userAccountImplementation;
 
     @GetMapping("/getUsers")
-    public List<UserAccount> getUsers(){
+    public List<UserAccountDto> getUsers(){
         return userAccountImplementation.getUsers();
     }
 
-    @PostMapping("/addUsers")
-    public UserAccount addUsers(@RequestBody UserAccount ua) {
-        return userAccountImplementation.addUsers(ua);
+    @PostMapping("/addUser")
+    public String addUser(@RequestBody UserAccountDto ua) {
+        return "User has been added";
     }
 
 }

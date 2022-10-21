@@ -1,10 +1,10 @@
 package com.devsecops.demo.Services;
 
-import com.devsecops.demo.Entity.UserAccount;
+import com.devsecops.demo.Dto.UserAccountDto;
 
 import java.util.List;
 
 public interface UserAccountService {
-    List<UserAccount> getUsers();
-    UserAccount addUsers(UserAccount ua);
+    List<UserAccountDto> getUsers();
+    void addUser(UserAccountDto ua);
 }

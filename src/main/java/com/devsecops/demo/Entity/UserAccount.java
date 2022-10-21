@@ -23,12 +23,19 @@ public class UserAccount {
         super();
     }
 
-    public UserAccount(int accountId, String accountName, String emailId, String password) {
-        super();
+    public UserAccount(int accountId, String accountName, String emailAccount, String password) {
         this.accountId = accountId;
         this.accountName = accountName;
-        this.emailId = emailId;
+        this.emailAccount = emailAccount;
         this.password = password;
+    }
+
+    public String getEmailAccount() {
+        return emailAccount;
+    }
+
+    public void setEmailAccount(String emailAccount) {
+        this.emailAccount = emailAccount;
     }
 
     public int getAccountId() {
@@ -45,14 +52,6 @@ public class UserAccount {
 
     public void setAccountName(String accountName) {
         this.accountName = accountName;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
     }
 
     public String getPassword() {
