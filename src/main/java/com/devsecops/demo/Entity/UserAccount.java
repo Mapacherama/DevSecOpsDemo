@@ -14,7 +14,7 @@ public class UserAccount {
     private String accountName;
 
     @Column(name="EmailAccount")
-    private String emailId;
+    private String emailAccount;
 
     @Column(name="Password")
     private String password;
