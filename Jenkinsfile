@@ -1,4 +1,5 @@
 pipeline {
+
   agent {
     kubernetes {
       yamlFile 'build-agent.yaml'
@@ -34,7 +35,7 @@ pipeline {
         stage('Create Jarfile') {
           steps {
             container('maven') {
-              sh 'mvn package -DskipTests'
+              sh 'mvn -f "(C://Users/jerom/OneDrive/Documenten/GitHub/DevSecOpsDemo)"package -DskipTests'
             }
           }
         }
