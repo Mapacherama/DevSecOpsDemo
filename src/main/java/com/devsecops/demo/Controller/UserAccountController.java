@@ -21,7 +21,7 @@ public class UserAccountController {
 
     @PostMapping("/addUser")
     public String addUser(@RequestBody UserAccountDto ua) {
-        return "User has been added";
+        return "User has been added" + ua.toString();
     }
 
 }
