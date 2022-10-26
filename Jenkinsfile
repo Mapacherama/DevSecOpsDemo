@@ -43,7 +43,9 @@ pipeline {
 
     stage('Deploy to Dev') {
       steps {
-        // TODO
+        withMaven(maven : 'maven_3_8_6') {
+                            sh 'mvn deploy'
+                        }
         sh "echo done"
       }
     }
