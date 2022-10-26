@@ -35,7 +35,7 @@ pipeline {
         stage('Create Jarfile') {
           steps {
             container('maven') {
-              sh 'mvn -f "(C://Users/jerom/OneDrive/Documenten/GitHub/DevSecOpsDemo)"package -DskipTests'
+              sh 'mvn package -DskipTests'
             }
           }
         }
